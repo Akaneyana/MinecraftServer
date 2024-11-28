@@ -16,7 +16,7 @@ sudo apt update && sudo apt upgrade
 
 **Finn IP-adressen til systemet:**
 ```bash
-ipa
+ip a
 ```
 
 ## Installasjon av Java og Oppsett av Filstruktur
@@ -25,7 +25,7 @@ Java er hovedkomponenten i en Minecraft-server. Installer Java og organiser serv
 
 Installer Java Kjør denne kommandoen for å installere Java:
 ```bash
-sudo apt-get install openjdk-21-jdk
+sudo apt install default-jre
 ```
 
 ### Guide for å lagre din server
@@ -66,7 +66,7 @@ wget https://piston-data.mojang.com/v1/objects/45810d238246d90e811d896f87b14695b
 
 Start Minecraft Servern med:
 ```bash
-java -Xmx1024M -Xms1024M -jar server.jar nogui
+java -Xmx1G -Xms1G -jar server.jar nogui
 ```
 
 ## eula.txt
@@ -99,8 +99,10 @@ eula=true
 
 Etter at du har endret `eula.txt`, start serveren på nytt ved å bruke følgende kommando:
 ```bash
-java -Xmx1024M -Xms1024M -jar server.jar nogui
+java -Xmx1G  -Xms1G -jar server.jar nogui
 ```
+Du kan justere hvor mye RAM serveren bruker ved å erstatte **`1G`** med ønsket mengde minne.
+
 Når serveren er startet, kan du skrive kommandoen **`help`** for å få en liste over tilgjengelige Minecraft-kommandoer
 
 
